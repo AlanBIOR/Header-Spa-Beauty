@@ -1,0 +1,9 @@
+@use "../abstracts/variables" as *;
+
+html * {
+    font-family: $montserrat-font;
+}
+ 
+body {
+    overflow-x: hidden;
+} 

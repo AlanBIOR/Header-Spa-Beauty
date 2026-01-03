@@ -1,0 +1,54 @@
+@use './variables' as *;
+
+
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) {
+      @content;
+    }
+  }
+}
+
+@mixin reset-list() {
+  list-style: none;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+@mixin reset-buttons() {
+  background: none;        // Quita el color de fondo gris
+  border: none;            // Quita el borde por defecto
+  padding: 0;              // Elimina el espacio interno
+  margin: 0;               // Elimina márgenes externos
+  font: inherit;           // Obliga al botón a usar la misma fuente que el resto del texto
+  color: inherit;          // Usa el mismo color de texto que el padre
+  cursor: pointer;         // Hace que aparezca la "manita" al pasar el ratón
+  outline: inherit;
+}
+
+// Estilo para boton
+@mixin color-azul-boton() {
+  background-color: $color-title;
+  border-radius: 32px;
+  color: $bg-secundary !important;
+  padding: 15px 30px;
+}

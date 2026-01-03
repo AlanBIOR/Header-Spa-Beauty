@@ -1,0 +1,14 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+button{
+    @include reset-buttons();
+
+    &.btn-text{
+        text-decoration: underline;
+    }
+
+    &.btn-signup {
+        @include color-azul-boton();
+    }
+}
